@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <title>Jornades de cuina</title>
+  </head>
+  <body class="inscription-page">
+
+    <include src="./views/header.html"></include>
+    <main>
+        <h1 class="inscription-titles">Inscripció</h1>
+        <form class="inscription-form__netlify" name="contact" method="POST" data-netlify="true">
+            <p class="mb-3">
+              <label>Nom: <input type="text" name="name" /></label>
+            </p>
+            <p class="mb-3">
+              <label>Email: <input type="email" name="email" /></label>
+            </p>
+            <p class="mb-3">
+              <label>Tipus d'inscripció: <select name="role[]" multiple class="form-select">
+                <option value="empresa">Empresa que oferirà menjars</option>
+                <option value="assistent">Assistent a les jornades</option>
+              </select></label>
+            </p>
+            <p class="mb-3">
+              <label>Missatge: <textarea name="message"></textarea></label>
+            </p>
+            <p class="mb-3">
+              <button type="submit" class="btn btn-primary">Inscriu-te</button>
+            </p>
+        </form>
+        <div class="inscripcio-imatges">
+          <h2 class="inscription-titles">Galeria d'imatges d'anys anteriors</h2>
+          <div>
+            <picture>
+              <source srcset="./assets/images/people.jpg?as=webp" type="image/webp" />
+              <img src="./assets/images/people.jpg" alt="Focs d'artifici" class="info-image__head" />
+            </picture>
+            <picture>
+                <source srcset="./assets/images/friends.jpg?as=webp" type="image/webp" />
+                <img src="./assets/images/friends.jpg" alt="Focs d'artifici" class="info-image__head" />
+            </picture>
+            <picture>
+              <source srcset="./assets/images/jason-ng-3VR6n-0NKJ8-unsplash.jpg?as=webp" type="image/webp" />
+              <img src="./assets/images/jason-ng-3VR6n-0NKJ8-unsplash.jpg" alt="Focs d'artifici" class="info-image__head" />
+            </picture>
+          </div>
+        </div>
+    </main>
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+    <script type="module" src="./assets/scripts/netlify.js"></script>
+  </body>
+</html>

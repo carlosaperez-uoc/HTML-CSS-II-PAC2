@@ -14,8 +14,13 @@
  */
 
  @use "layouts/home";
+ @use "layouts/speakers";
+ @use "layouts/info";
+ @use "layouts/inscripcio";
  @use "layouts/header";
  @use "layouts/footer";
+
+ @layer defaults, overrides;
 
 /**
  * Do NOT include anything else in this file!

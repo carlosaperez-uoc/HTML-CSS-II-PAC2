@@ -2,19 +2,21 @@
 @use "../functions";
 @use "sass:color";
 
-
-header{
-    display: flex;
-    padding: 0em 4em;
+.header{
+    text-align: center;
+    border-bottom: 1px solid black;
 }
 
 ul{
     display: flex;
+    padding: 0;
     list-style: none;
 }
 
 ul>li{
+    width: 100%;
     padding: 1em;
+    text-align: center;
 }
 
 ul>li>a{
@@ -32,4 +34,17 @@ ul>li>a:hover{
 
 .menu-links{
     align-content: center;
+}
+
+@media (min-width: 800px) {
+    .header{
+        display: flex;
+        padding: 0em 4em;
+        text-align: left;
+    }
+    
+    ul>li{
+        width: auto;
+        text-align: left;
+    }
 }
